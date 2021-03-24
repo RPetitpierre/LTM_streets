@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_32e62bedd9a14cf88368921141d029d0 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    
+                <style>
+                    .leaflet-image-layer {
+                        /* old android/safari*/
+                        image-rendering: -webkit-optimize-contrast;
+                        image-rendering: crisp-edges; /* safari */
+                        image-rendering: pixelated; /* chrome */
+                        image-rendering: -moz-crisp-edges; /* firefox */
+                        image-rendering: -o-crisp-edges; /* opera */
+                        -ms-interpolation-mode: nearest-neighbor; /* ie */
+                    }
+                </style>
+            
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_32e62bedd9a14cf88368921141d029d0" ></div>
+        
+</body>
+<script>    
+    
+            var map_32e62bedd9a14cf88368921141d029d0 = L.map(
+                "map_32e62bedd9a14cf88368921141d029d0",
+                {
+                    center: [46.522, 6.635],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 16,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+            L.control.scale().addTo(map_32e62bedd9a14cf88368921141d029d0);
+
+            
+
+        
+    
+            var tile_layer_cb69cd67dcba40688d10fd7bc67250d0 = L.tileLayer(
+                "https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"http://cartodb.com/attributions\"\u003eCartoDB\u003c/a\u003e, CartoDB \u003ca href =\"http://cartodb.com/attributions\"\u003eattributions\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_32e62bedd9a14cf88368921141d029d0);
+        
+    
+            var image_overlay_9db2198cb2d24983b581b510ffb22e52 = L.imageOverlay(
+                "https://gallica.bnf.fr/iiif/ark:/12148/btv1b530292533/f1/641,804,5564,6941/full/22/native.jpg",
+                [[46.5014, 6.609], [46.538, 6.6563]],
+                {"crossOrigin": false, "interactive": false, "opacity": 0.5, "zindex": 1}
+            ).addTo(map_32e62bedd9a14cf88368921141d029d0);
+        
+    
+            var layer_control_90643201e5034417b6a84bb4274942ca = {
+                base_layers : {
+                    "cartodbpositron" : tile_layer_cb69cd67dcba40688d10fd7bc67250d0,
+                },
+                overlays :  {
+                    "Plan Lausanne 1806" : image_overlay_9db2198cb2d24983b581b510ffb22e52,
+                },
+            };
+            L.control.layers(
+                layer_control_90643201e5034417b6a84bb4274942ca.base_layers,
+                layer_control_90643201e5034417b6a84bb4274942ca.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_32e62bedd9a14cf88368921141d029d0);
+        
+    
+            var marker_c51b9dc418e84019878d4126c3eb311d = L.marker(
+                [46.52555715, 6.63597095],
+                {"markerColor": "red"}
+            ).addTo(map_32e62bedd9a14cf88368921141d029d0);
+        
+    
+        var popup_9cb0cb03ea0349f6838f193afa2c7df0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e8a4cf3b9753467391d0101a6fde8138 = $(`<div id="html_e8a4cf3b9753467391d0101a6fde8138" style="width: 100.0%; height: 100.0%;"><center><b>Barre</b></center><br><img src="https://raw.githubusercontent.com/RPetitpierre/LTM_streets/master/Barre.png" height="20"></div>`)[0];
+            popup_9cb0cb03ea0349f6838f193afa2c7df0.setContent(html_e8a4cf3b9753467391d0101a6fde8138);
+        
+
+        marker_c51b9dc418e84019878d4126c3eb311d.bindPopup(popup_9cb0cb03ea0349f6838f193afa2c7df0)
+        ;
+
+        
+    
+    
+            var marker_8d77b4dd8a58452888c8fc7025295666 = L.marker(
+                [46.5384, 6.620052680953634],
+                {"markerColor": "red"}
+            ).addTo(map_32e62bedd9a14cf88368921141d029d0);
+        
+    
+        var popup_04e787470eb645fa9c305c1e599afd29 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9be6301794274d438c331a45bd043e25 = $(`<div id="html_9be6301794274d438c331a45bd043e25" style="width: 100.0%; height: 100.0%;"><center><b>Chabliere|Blecherette|Pontaize|Loup|Bois gentil</b></center><br><img src="https://raw.githubusercontent.com/RPetitpierre/LTM_streets/master/Chabliere|Blecherette|Pontaize|Loup|Bois_gentil.png" height="20"></div>`)[0];
+            popup_04e787470eb645fa9c305c1e599afd29.setContent(html_9be6301794274d438c331a45bd043e25);
+        
+
+        marker_8d77b4dd8a58452888c8fc7025295666.bindPopup(popup_04e787470eb645fa9c305c1e599afd29)
+        ;
+
+        
+    
+    
+            var marker_b22b6398147e481ba5593e46b2bf4ea9 = L.marker(
+                [46.5328, 6.65024],
+                {"markerColor": "red"}
+            ).addTo(map_32e62bedd9a14cf88368921141d029d0);
+        
+    
+        var popup_24de1c05a3604a7db6f62e554e26b9ac = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1b55cdf628d84561b61bd1a704a5f7af = $(`<div id="html_1b55cdf628d84561b61bd1a704a5f7af" style="width: 100.0%; height: 100.0%;"><center><b>Chailly|Gottetaz|Bethusy|Grangette|Calvaire|La Sallaz|Vennes|Monteron|Grange Neuve|Pra-Sechaux</b></center><br><img src="https://raw.githubusercontent.com/RPetitpierre/LTM_streets/master/Chailly|Gottetaz|Bethusy|Grangette|Calvaire|La_Sallaz|Vennes|Monteron|Grange_Neuve|Pra-Sechaux.png" height="20"></div>`)[0];
+            popup_24de1c05a3604a7db6f62e554e26b9ac.setContent(html_1b55cdf628d84561b61bd1a704a5f7af);
+        
+
+        marker_b22b6398147e481ba5593e46b2bf4ea9.bindPopup(popup_24de1c05a3604a7db6f62e554e26b9ac)
+        ;
+
+        
+    
+    
+            var marker_8a3958c920ee42c5afd4c9f6a3081e51 = L.marker(
+                [46.524295499999994, 6.63104535],
+                {"markerColor": "red"}
+            ).addTo(map_32e62bedd9a14cf88368921141d029d0);
+        
+    
+        var popup_5a6bb97375c446e39c657db5fefac443 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_091d5c9583be45059e7b589d27bfb4b2 = $(`<div id="html_091d5c9583be45059e7b589d27bfb4b2" style="width: 100.0%; height: 100.0%;"><center><b>Chaucrau|Clos|Riponne|Valentin</b></center><br><img src="https://raw.githubusercontent.com/RPetitpierre/LTM_streets/master/Chaucrau|Clos|Riponne|Valentin.png" height="20"></div>`)[0];
+            popup_5a6bb97375c446e39c657db5fefac443.setContent(html_091d5c9583be45059e7b589d27bfb4b2);
+        
+
+        marker_8a3958c920ee42c5afd4c9f6a3081e51.bindPopup(popup_5a6bb97375c446e39c657db5fefac443)
+        ;
+
+        
+    
+    
+            var marker_b418c161abe84e00bcadae7763ffd893 = L.marker(
+                [46.5204, 6.63636],
+                {"markerColor": "red"}
+            ).addTo(map_32e62bedd9a14cf88368921141d029d0);
+        
+    
+        var popup_260e92b07fce4c478a375dc38f60b15e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ed49b07056144f6187c0684482c2d5a0 = $(`<div id="html_ed49b07056144f6187c0684482c2d5a0" style="width: 100.0%; height: 100.0%;"><center><b>Cheneau de Bourg</b></center><br><img src="https://raw.githubusercontent.com/RPetitpierre/LTM_streets/master/Cheneau_de_Bourg.png" height="20"></div>`)[0];
+            popup_260e92b07fce4c478a375dc38f60b15e.setContent(html_ed49b07056144f6187c0684482c2d5a0);
+        
+
+        marker_b418c161abe84e00bcadae7763ffd893.bindPopup(popup_260e92b07fce4c478a375dc38f60b15e)
+        ;
+
+        
+    
+    
+            var marker_04888ddd9ad04f87bce32e8add6dd418 = L.marker(
+                [46.52349465, 6.6361057500000005],
+                {"markerColor": "red"}
+            ).addTo(map_32e62bedd9a14cf88368921141d029d0);
+        
+    
+        var popup_cec1d43a01b34df29d7d9fbdf498faef = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e963bd06289f4e9f9437ed34537f1113 = $(`<div id="html_e963bd06289f4e9f9437ed34537f1113" style="width: 100.0%; height: 100.0%;"><center><b>Cite derriere</b></center><br><img src="https://raw.githubusercontent.com/RPetitpierre/LTM_streets/master/Cite_derriere.png" height="20"></div>`)[0];
+            popup_cec1d43a01b34df29d7d9fbdf498faef.setContent(html_e963bd06289f4e9f9437ed34537f1113);
+        
+
+        marker_04888ddd9ad04f87bce32e8add6dd418.bindPopup(popup_cec1d43a01b34df29d7d9fbdf498faef)
+        ;
+
+        
+    
+    
+            var marker_8aa6ff29f4a84256888d368a009e6905 = L.marker(
+                [46.523591350000004, 6.63529965],
+                {"markerColor": "red"}
+            ).addTo(map_32e62bedd9a14cf88368921141d029d0);
+        
+    
+        var popup_c815a88ca2ea43299bf63cd75aab1927 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a2ac30776a4f49a8ab01d9f35d540bfc = $(`<div id="html_a2ac30776a4f49a8ab01d9f35d540bfc" style="width: 100.0%; height: 100.0%;"><center><b>Cite devant</b></center><br><img src="https://raw.githubusercontent.com/RPetitpierre/LTM_streets/master/Cite_devant.png" height="20"></div>`)[0];
+            popup_c815a88ca2ea43299bf63cd75aab1927.setContent(html_a2ac30776a4f49a8ab01d9f35d540bfc);
+        
+
+        marker_8aa6ff29f4a84256888d368a009e6905.bindPopup(popup_c815a88ca2ea43299bf63cd75aab1927)
+        ;
+
+        
+    
+    
+            var marker_a27085c6eb41422daff06286c0013f49 = L.marker(
+                [46.5138915, 6.6220064999999995],
+                {"markerColor": "red"}
+            ).addTo(map_32e62bedd9a14cf88368921141d029d0);
+        
+    
+        var popup_256fd01bb2b84150b7ccd467214a7ce8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ab1a439ae8984261ab4ba0ddf690f945 = $(`<div id="html_ab1a439ae8984261ab4ba0ddf690f945" style="width: 100.0%; height: 100.0%;"><center><b>Cour</b></center><br><img src="https://raw.githubusercontent.com/RPetitpierre/LTM_streets/master/Cour.png" height="20"></div>`)[0];
+            popup_256fd01bb2b84150b7ccd467214a7ce8.setContent(html_ab1a439ae8984261ab4ba0ddf690f945);
+        
+
+        marker_a27085c6eb41422daff06286c0013f49.bindPopup(popup_256fd01bb2b84150b7ccd467214a7ce8)
+        ;
+
+        
+    
+    
+            var marker_d402e13d1fed4b51b80f9e8510005e82 = L.marker(
+                [46.51155, 6.6343700000000005],
+                {"markerColor": "red"}
+            ).addTo(map_32e62bedd9a14cf88368921141d029d0);
+        
+    
+        var popup_d211bc9d68d54b799c2a9d43a95f5bfd = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4b0b8b50c2324666a6a1a3a738d59d51 = $(`<div id="html_4b0b8b50c2324666a6a1a3a738d59d51" style="width: 100.0%; height: 100.0%;"><center><b>Denantou|Mont choisi|Mont Olivet|Servant|Jordil|Montrions|Croix de rive</b></center><br><img src="https://raw.githubusercontent.com/RPetitpierre/LTM_streets/master/Denantou|Mont_choisi|Mont_Olivet|Servant|Jordil|Montrions|Croix_de_rive.png" height="20"></div>`)[0];
+            popup_d211bc9d68d54b799c2a9d43a95f5bfd.setContent(html_4b0b8b50c2324666a6a1a3a738d59d51);
+        
+
+        marker_d402e13d1fed4b51b80f9e8510005e82.bindPopup(popup_d211bc9d68d54b799c2a9d43a95f5bfd)
+        ;
+
+        
+    
+    
+            var marker_fac913217d3e4735872d17f177076467 = L.marker(
+                [46.52199005, 6.6337307],
+                {"markerColor": "red"}
+            ).addTo(map_32e62bedd9a14cf88368921141d029d0);
+        
+    
+        var popup_a62971b969f64cd98c9f8449990176cc = L.popup({"maxWidth": "100%"});
+
+        
+            var html_cf095fd9b18649459094efaedd274116 = $(`<div id="html_cf095fd9b18649459094efaedd274116" style="width: 100.0%; height: 100.0%;"><center><b>Escaliers du marche</b></center><br><img src="https://raw.githubusercontent.com/RPetitpierre/LTM_streets/master/Escaliers_du_marche.png" height="20"></div>`)[0];
+            popup_a62971b969f64cd98c9f8449990176cc.setContent(html_cf095fd9b18649459094efaedd274116);
+        
+
+        marker_fac913217d3e4735872d17f177076467.bindPopup(popup_a62971b969f64cd98c9f8449990176cc)
+        ;
+
+        
+    
+    
+            var marker_bfcdc896eabe46958de3a2c69c2aaca2 = L.marker(
+                [46.51927595, 6.639098150000001],
+                {"markerColor": "red"}
+            ).addTo(map_32e62bedd9a14cf88368921141d029d0);
+        
+    
+        var popup_5ff0eb90aa9e4529a284dc5225435f06 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c534fc7111b644cb9e865a49090af93e = $(`<div id="html_c534fc7111b644cb9e865a49090af93e" style="width: 100.0%; height: 100.0%;"><center><b>Etraz</b></center><br><img src="https://raw.githubusercontent.com/RPetitpierre/LTM_streets/master/Etraz.png" height="20"></div>`)[0];
+            popup_5ff0eb90aa9e4529a284dc5225435f06.setContent(html_c534fc7111b644cb9e865a49090af93e);
+        
+
+        marker_bfcdc896eabe46958de3a2c69c2aaca2.bindPopup(popup_5ff0eb90aa9e4529a284dc5225435f06)
+        ;
+
+        
+    
+    
+            var marker_28764cd3abca4827b6ec9296956d0a84 = L.marker(
+                [46.519735499999996, 6.6301155000000005],
+                {"markerColor": "red"}
+            ).addTo(map_32e62bedd9a14cf88368921141d029d0);
+        
+    
+        var popup_8044ac3035da402b876776f8697461b1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7169f68a1d5b457bb14abc40d3bb3cf4 = $(`<div id="html_7169f68a1d5b457bb14abc40d3bb3cf4" style="width: 100.0%; height: 100.0%;"><center><b>Grand Chene|Montbenon</b></center><br><img src="https://raw.githubusercontent.com/RPetitpierre/LTM_streets/master/Grand_Chene|Montbenon.png" height="20"></div>`)[0];
+            popup_8044ac3035da402b876776f8697461b1.setContent(html_7169f68a1d5b457bb14abc40d3bb3cf4);
+        
+
+        marker_28764cd3abca4827b6ec9296956d0a84.bindPopup(popup_8044ac3035da402b876776f8697461b1)
+        ;
+
+        
+    
+    
+            var marker_6ef39e1d1d3c475c9b9e2d429573eb5b = L.marker(
+                [46.5218, 6.63103],
+                {"markerColor": "red"}
+            ).addTo(map_32e62bedd9a14cf88368921141d029d0);
+        
+    
+        var popup_8655de0a9b9c4ea286533857da59a37c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3b9f71799cf54f7db8397d8eeb81afa0 = $(`<div id="html_3b9f71799cf54f7db8397d8eeb81afa0" style="width: 100.0%; height: 100.0%;"><center><b>Grand St Jean</b></center><br><img src="https://raw.githubusercontent.com/RPetitpierre/LTM_streets/master/Grand_St_Jean.png" height="20"></div>`)[0];
+            popup_8655de0a9b9c4ea286533857da59a37c.setContent(html_3b9f71799cf54f7db8397d8eeb81afa0);
+        
+
+        marker_6ef39e1d1d3c475c9b9e2d429573eb5b.bindPopup(popup_8655de0a9b9c4ea286533857da59a37c)
+        ;
+
+        
+    
+    
+            var marker_fbfdeb6a6b444cfc834adfbdf8a7b592 = L.marker(
+                [46.52427125, 6.63699235],
+                {"markerColor": "red"}
+            ).addTo(map_32e62bedd9a14cf88368921141d029d0);
+        
+    
+        var popup_d05532ae6b0c4b66ac2b8307c3bcca6c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c45b411c6a4745e9b8c5a55c19c4e427 = $(`<div id="html_c45b411c6a4745e9b8c5a55c19c4e427" style="width: 100.0%; height: 100.0%;"><center><b>Grotte</b></center><br><img src="https://raw.githubusercontent.com/RPetitpierre/LTM_streets/master/Grotte.png" height="20"></div>`)[0];
+            popup_d05532ae6b0c4b66ac2b8307c3bcca6c.setContent(html_c45b411c6a4745e9b8c5a55c19c4e427);
+        
+
+        marker_fbfdeb6a6b444cfc834adfbdf8a7b592.bindPopup(popup_d05532ae6b0c4b66ac2b8307c3bcca6c)
+        ;
+
+        
+    
+    
+            var marker_62c0c68b154b49109c8768ee10c26fb2 = L.marker(
+                [46.52344065, 6.6261043],
+                {"markerColor": "red"}
+            ).addTo(map_32e62bedd9a14cf88368921141d029d0);
+        
+    
+        var popup_8170e58d49604d1a822a9dcc4ca65bbd = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d439580371a8499da8eddcc3cd2fedc9 = $(`<div id="html_d439580371a8499da8eddcc3cd2fedc9" style="width: 100.0%; height: 100.0%;"><center><b>Halle|Halle St Laurent|Derriere les Terreaux|Chauderon|Maupas|Beaulieu</b></center><br><img src="https://raw.githubusercontent.com/RPetitpierre/LTM_streets/master/Halle|Halle_St_Laurent|Derriere_les_Terreaux|Chauderon|Maupas|Beaulieu.png" height="20"></div>`)[0];
+            popup_8170e58d49604d1a822a9dcc4ca65bbd.setContent(html_d439580371a8499da8eddcc3cd2fedc9);
+        
+
+        marker_62c0c68b154b49109c8768ee10c26fb2.bindPopup(popup_8170e58d49604d1a822a9dcc4ca65bbd)
+        ;
+
+        
+    
+    
+            var marker_c766d96a2e3c4944aa01c8d2a45d5f96 = L.marker(
+                [46.5229, 6.63359],
+                {"markerColor": "red"}
+            ).addTo(map_32e62bedd9a14cf88368921141d029d0);
+        
+    
+        var popup_dd1d30524d7a4e1587fb463698240f3d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d4d589b658e94da4bd19ad88c3da1208 = $(`<div id="html_d4d589b658e94da4bd19ad88c3da1208" style="width: 100.0%; height: 100.0%;"><center><b>Madelaine</b></center><br><img src="https://raw.githubusercontent.com/RPetitpierre/LTM_streets/master/Madelaine.png" height="20"></div>`)[0];
+            popup_dd1d30524d7a4e1587fb463698240f3d.setContent(html_d4d589b658e94da4bd19ad88c3da1208);
+        
+
+        marker_c766d96a2e3c4944aa01c8d2a45d5f96.bindPopup(popup_dd1d30524d7a4e1587fb463698240f3d)
+        ;
+
+        
+    
+    
+            var marker_d93c6bf1fb314bc3b6ea88bc66a25b78 = L.marker(
+                [46.5242, 6.61462],
+                {"markerColor": "red"}
+            ).addTo(map_32e62bedd9a14cf88368921141d029d0);
+        
+    
+        var popup_97726030e91441369a004f9011000bef = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e1f08a1ec6de4ea6ae9d6d21b3544994 = $(`<div id="html_e1f08a1ec6de4ea6ae9d6d21b3544994" style="width: 100.0%; height: 100.0%;"><center><b>Malley|Sebillon|Valency|Boston</b></center><br><img src="https://raw.githubusercontent.com/RPetitpierre/LTM_streets/master/Malley|Sebillon|Valency|Boston.png" height="20"></div>`)[0];
+            popup_97726030e91441369a004f9011000bef.setContent(html_e1f08a1ec6de4ea6ae9d6d21b3544994);
+        
+
+        marker_d93c6bf1fb314bc3b6ea88bc66a25b78.bindPopup(popup_97726030e91441369a004f9011000bef)
+        ;
+
+        
+    
+    
+            var marker_12f275f0e99344359579d1185ba0843d = L.marker(
+                [46.5208, 6.63886],
+                {"markerColor": "red"}
+            ).addTo(map_32e62bedd9a14cf88368921141d029d0);
+        
+    
+        var popup_dbabb29488e54467a85f43a5813ea812 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e43d3793632e4e76acb52d3cbfb3e4ea = $(`<div id="html_e43d3793632e4e76acb52d3cbfb3e4ea" style="width: 100.0%; height: 100.0%;"><center><b>Martherey</b></center><br><img src="https://raw.githubusercontent.com/RPetitpierre/LTM_streets/master/Martherey.png" height="20"></div>`)[0];
+            popup_dbabb29488e54467a85f43a5813ea812.setContent(html_e43d3793632e4e76acb52d3cbfb3e4ea);
+        
+
+        marker_12f275f0e99344359579d1185ba0843d.bindPopup(popup_dbabb29488e54467a85f43a5813ea812)
+        ;
+
+        
+    
+    
+            var marker_b13c621d2daa4040997586afee3f73f2 = L.marker(
+                [46.521512075000004, 6.635080089302795],
+                {"markerColor": "red"}
+            ).addTo(map_32e62bedd9a14cf88368921141d029d0);
+        
+    
+        var popup_d7033e8cd9ed494e80e6184479dae05e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_eb97578786fa4d9ca5fc2800ec3b802c = $(`<div id="html_eb97578786fa4d9ca5fc2800ec3b802c" style="width: 100.0%; height: 100.0%;"><center><b>Mercerie</b></center><br><img src="https://raw.githubusercontent.com/RPetitpierre/LTM_streets/master/Mercerie.png" height="20"></div>`)[0];
+            popup_d7033e8cd9ed494e80e6184479dae05e.setContent(html_eb97578786fa4d9ca5fc2800ec3b802c);
+        
+
+        marker_b13c621d2daa4040997586afee3f73f2.bindPopup(popup_d7033e8cd9ed494e80e6184479dae05e)
+        ;
+
+        
+    
+    
+            var marker_e2dffeba735b4405bb28e704a681396e = L.marker(
+                [46.516, 6.63282],
+                {"markerColor": "red"}
+            ).addTo(map_32e62bedd9a14cf88368921141d029d0);
+        
+    
+        var popup_fe2eab87b80d4e6392566e9335ea8779 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1cd15888292e4c9bbd65769e831fd7fd = $(`<div id="html_1cd15888292e4c9bbd65769e831fd7fd" style="width: 100.0%; height: 100.0%;"><center><b>Montee St Francois</b></center><br><img src="https://raw.githubusercontent.com/RPetitpierre/LTM_streets/master/Montee_St_Francois.png" height="20"></div>`)[0];
+            popup_fe2eab87b80d4e6392566e9335ea8779.setContent(html_1cd15888292e4c9bbd65769e831fd7fd);
+        
+
+        marker_e2dffeba735b4405bb28e704a681396e.bindPopup(popup_fe2eab87b80d4e6392566e9335ea8779)
+        ;
+
+        
+    
+    
+            var marker_85c63efd7d0a40a28dfb5281eecd625e = L.marker(
+                [46.5202355, 6.5996375],
+                {"markerColor": "red"}
+            ).addTo(map_32e62bedd9a14cf88368921141d029d0);
+        
+    
+        var popup_b4e75f1d2ca54bd0a4b679497bc0b310 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3e478bbd59e44b829b7fdf6b7d703846 = $(`<div id="html_3e478bbd59e44b829b7fdf6b7d703846" style="width: 100.0%; height: 100.0%;"><center><b>Montoye|Maladiere|Bois de Vaux|Bourdonette</b></center><br><img src="https://raw.githubusercontent.com/RPetitpierre/LTM_streets/master/Montoye|Maladiere|Bois_de_Vaux|Bourdonette.png" height="20"></div>`)[0];
+            popup_b4e75f1d2ca54bd0a4b679497bc0b310.setContent(html_3e478bbd59e44b829b7fdf6b7d703846);
+        
+
+        marker_85c63efd7d0a40a28dfb5281eecd625e.bindPopup(popup_b4e75f1d2ca54bd0a4b679497bc0b310)
+        ;
+
+        
+    
+    
+            var marker_8c1c3b44eff54a19a86813234ba5a12b = L.marker(
+                [46.5096099, 6.627849749999999],
+                {"markerColor": "red"}
+            ).addTo(map_32e62bedd9a14cf88368921141d029d0);
+        
+    
+        var popup_335917b63c1a41d8885e47e21faaabf9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d840810da3c84dfeb9837c3d5d2ce1b3 = $(`<div id="html_d840810da3c84dfeb9837c3d5d2ce1b3" style="width: 100.0%; height: 100.0%;"><center><b>Ouchy</b></center><br><img src="https://raw.githubusercontent.com/RPetitpierre/LTM_streets/master/Ouchy.png" height="20"></div>`)[0];
+            popup_335917b63c1a41d8885e47e21faaabf9.setContent(html_d840810da3c84dfeb9837c3d5d2ce1b3);
+        
+
+        marker_8c1c3b44eff54a19a86813234ba5a12b.bindPopup(popup_335917b63c1a41d8885e47e21faaabf9)
+        ;
+
+        
+    
+    
+            var marker_e6923b96fe60492fad3c8187caad41a6 = L.marker(
+                [46.5218657, 6.63315525],
+                {"markerColor": "red"}
+            ).addTo(map_32e62bedd9a14cf88368921141d029d0);
+        
+    
+        var popup_9cac9251d4e64b1ca5056e4d164248fe = L.popup({"maxWidth": "100%"});
+
+        
+            var html_037922612147441eb5069e0c7e503cf5 = $(`<div id="html_037922612147441eb5069e0c7e503cf5" style="width: 100.0%; height: 100.0%;"><center><b>Palud</b></center><br><img src="https://raw.githubusercontent.com/RPetitpierre/LTM_streets/master/Palud.png" height="20"></div>`)[0];
+            popup_9cac9251d4e64b1ca5056e4d164248fe.setContent(html_037922612147441eb5069e0c7e503cf5);
+        
+
+        marker_e6923b96fe60492fad3c8187caad41a6.bindPopup(popup_9cac9251d4e64b1ca5056e4d164248fe)
+        ;
+
+        
+    
+    
+            var marker_544da3f3c26241e386b66becf653f791 = L.marker(
+                [46.51863755, 6.6310231],
+                {"markerColor": "red"}
+            ).addTo(map_32e62bedd9a14cf88368921141d029d0);
+        
+    
+        var popup_8236f4095ea04bed9353e77e49fdc3d2 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1617554ca70042109190588c33d8d356 = $(`<div id="html_1617554ca70042109190588c33d8d356" style="width: 100.0%; height: 100.0%;"><center><b>Petit Chene</b></center><br><img src="https://raw.githubusercontent.com/RPetitpierre/LTM_streets/master/Petit_Chene.png" height="20"></div>`)[0];
+            popup_8236f4095ea04bed9353e77e49fdc3d2.setContent(html_1617554ca70042109190588c33d8d356);
+        
+
+        marker_544da3f3c26241e386b66becf653f791.bindPopup(popup_8236f4095ea04bed9353e77e49fdc3d2)
+        ;
+
+        
+    
+    
+            var marker_33e5692e3d494a38965ccd194a188fee = L.marker(
+                [46.5211, 6.63291],
+                {"markerColor": "red"}
+            ).addTo(map_32e62bedd9a14cf88368921141d029d0);
+        
+    
+        var popup_3dbcb10512664b0bb93e97c028f77b39 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_094dc6fb80f643e0aad545ccf4bd20ca = $(`<div id="html_094dc6fb80f643e0aad545ccf4bd20ca" style="width: 100.0%; height: 100.0%;"><center><b>Petit St Jean</b></center><br><img src="https://raw.githubusercontent.com/RPetitpierre/LTM_streets/master/Petit_St_Jean.png" height="20"></div>`)[0];
+            popup_3dbcb10512664b0bb93e97c028f77b39.setContent(html_094dc6fb80f643e0aad545ccf4bd20ca);
+        
+
+        marker_33e5692e3d494a38965ccd194a188fee.bindPopup(popup_3dbcb10512664b0bb93e97c028f77b39)
+        ;
+
+        
+    
+    
+            var marker_12658d5bb2774cbc8c97ed58f32cbc68 = L.marker(
+                [46.5195998, 6.6331116311780995],
+                {"markerColor": "red"}
+            ).addTo(map_32e62bedd9a14cf88368921141d029d0);
+        
+    
+        var popup_91f10f08d2074c679fd69fc398d5db49 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f0a45e7a9b1741e4af91417debf77597 = $(`<div id="html_f0a45e7a9b1741e4af91417debf77597" style="width: 100.0%; height: 100.0%;"><center><b>Place St Francois</b></center><br><img src="https://raw.githubusercontent.com/RPetitpierre/LTM_streets/master/Place_St_Francois.png" height="20"></div>`)[0];
+            popup_91f10f08d2074c679fd69fc398d5db49.setContent(html_f0a45e7a9b1741e4af91417debf77597);
+        
+
+        marker_12658d5bb2774cbc8c97ed58f32cbc68.bindPopup(popup_91f10f08d2074c679fd69fc398d5db49)
+        ;
+
+        
+    
+    
+            var marker_1d972930e62b417b8b8524abf68d0822 = L.marker(
+                [46.5223, 6.63074],
+                {"markerColor": "red"}
+            ).addTo(map_32e62bedd9a14cf88368921141d029d0);
+        
+    
+        var popup_0db46e12be424aaa81648be4e01d0cbc = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6ee09f99a5074a4eb05a2a4c11bcbbd1 = $(`<div id="html_6ee09f99a5074a4eb05a2a4c11bcbbd1" style="width: 100.0%; height: 100.0%;"><center><b>Place de St Laurent</b></center><br><img src="https://raw.githubusercontent.com/RPetitpierre/LTM_streets/master/Place_de_St_Laurent.png" height="20"></div>`)[0];
+            popup_0db46e12be424aaa81648be4e01d0cbc.setContent(html_6ee09f99a5074a4eb05a2a4c11bcbbd1);
+        
+
+        marker_1d972930e62b417b8b8524abf68d0822.bindPopup(popup_0db46e12be424aaa81648be4e01d0cbc)
+        ;
+
+        
+    
+    
+            var marker_6c14a7b812824f918569adb1c02cc1db = L.marker(
+                [46.5386, 6.68013],
+                {"markerColor": "red"}
+            ).addTo(map_32e62bedd9a14cf88368921141d029d0);
+        
+    
+        var popup_07973790ed614228abba7a88af97dce9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_381940937e824f7c90f37b8b042660d2 = $(`<div id="html_381940937e824f7c90f37b8b042660d2" style="width: 100.0%; height: 100.0%;"><center><b>Place du Pont</b></center><br><img src="https://raw.githubusercontent.com/RPetitpierre/LTM_streets/master/Place_du_Pont.png" height="20"></div>`)[0];
+            popup_07973790ed614228abba7a88af97dce9.setContent(html_381940937e824f7c90f37b8b042660d2);
+        
+
+        marker_6c14a7b812824f918569adb1c02cc1db.bindPopup(popup_07973790ed614228abba7a88af97dce9)
+        ;
+
+        
+    
+    
+            var marker_d403d65342fd479db88dfdc156ed568b = L.marker(
+                [46.520590600000006, 6.63384015],
+                {"markerColor": "red"}
+            ).addTo(map_32e62bedd9a14cf88368921141d029d0);
+        
+    
+        var popup_f9ef55b2111f4987866690ecb32f8da9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_81ed56cbecd846e49236de4b89adb1c8 = $(`<div id="html_81ed56cbecd846e49236de4b89adb1c8" style="width: 100.0%; height: 100.0%;"><center><b>Rue St Francois</b></center><br><img src="https://raw.githubusercontent.com/RPetitpierre/LTM_streets/master/Rue_St_Francois.png" height="20"></div>`)[0];
+            popup_f9ef55b2111f4987866690ecb32f8da9.setContent(html_81ed56cbecd846e49236de4b89adb1c8);
+        
+
+        marker_d403d65342fd479db88dfdc156ed568b.bindPopup(popup_f9ef55b2111f4987866690ecb32f8da9)
+        ;
+
+        
+    
+    
+            var marker_8dfab886fbd14a43abaf83a169b745cd = L.marker(
+                [46.521194699999995, 6.6320423],
+                {"markerColor": "red"}
+            ).addTo(map_32e62bedd9a14cf88368921141d029d0);
+        
+    
+        var popup_6ee4f8500b5049c8b8453c7a1578e38d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6d8079cfc3aa4c4bbbcdc2c9827ed8ca = $(`<div id="html_6d8079cfc3aa4c4bbbcdc2c9827ed8ca" style="width: 100.0%; height: 100.0%;"><center><b>Rue du Pont</b></center><br><img src="https://raw.githubusercontent.com/RPetitpierre/LTM_streets/master/Rue_du_Pont.png" height="20"></div>`)[0];
+            popup_6ee4f8500b5049c8b8453c7a1578e38d.setContent(html_6d8079cfc3aa4c4bbbcdc2c9827ed8ca);
+        
+
+        marker_8dfab886fbd14a43abaf83a169b745cd.bindPopup(popup_6ee4f8500b5049c8b8453c7a1578e38d)
+        ;
+
+        
+    
+    
+            var marker_d4a54b1478b24fdd9a3d3e05498e3962 = L.marker(
+                [46.5263, 6.60538],
+                {"markerColor": "red"}
+            ).addTo(map_32e62bedd9a14cf88368921141d029d0);
+        
+    
+        var popup_d50a1d7294e54c6cb6fc69bcb13df2ef = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8666f0014b4d4fab8c6d937cbcb35548 = $(`<div id="html_8666f0014b4d4fab8c6d937cbcb35548" style="width: 100.0%; height: 100.0%;"><center><b>Rue du Pre</b></center><br><img src="https://raw.githubusercontent.com/RPetitpierre/LTM_streets/master/Rue_du_Pre.png" height="20"></div>`)[0];
+            popup_d50a1d7294e54c6cb6fc69bcb13df2ef.setContent(html_8666f0014b4d4fab8c6d937cbcb35548);
+        
+
+        marker_d4a54b1478b24fdd9a3d3e05498e3962.bindPopup(popup_d50a1d7294e54c6cb6fc69bcb13df2ef)
+        ;
+
+        
+    
+    
+            var marker_93b9c3dcc07b4bed9a638a4d7d986bb8 = L.marker(
+                [46.528519, 6.635330089302796],
+                {"markerColor": "red"}
+            ).addTo(map_32e62bedd9a14cf88368921141d029d0);
+        
+    
+        var popup_ae64bf2b5334492e9aa1747db039052f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_64847d8053234e36bad158d2a11f5bed = $(`<div id="html_64847d8053234e36bad158d2a11f5bed" style="width: 100.0%; height: 100.0%;"><center><b>St Etienne|Hopital|Cite dessous</b></center><br><img src="https://raw.githubusercontent.com/RPetitpierre/LTM_streets/master/St_Etienne|Hopital|Cite_dessous.png" height="20"></div>`)[0];
+            popup_ae64bf2b5334492e9aa1747db039052f.setContent(html_64847d8053234e36bad158d2a11f5bed);
+        
+
+        marker_93b9c3dcc07b4bed9a638a4d7d986bb8.bindPopup(popup_ae64bf2b5334492e9aa1747db039052f)
+        ;
+
+        
+    
+    
+            var marker_1383b40b62764effaf345fb48378b3f9 = L.marker(
+                [46.522269449999996, 6.630806934235624],
+                {"markerColor": "red"}
+            ).addTo(map_32e62bedd9a14cf88368921141d029d0);
+        
+    
+        var popup_3c0afbd2cc764cc3813dd897a04f28c0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4ba9ab4ec12f481c8e5480b320e6a42b = $(`<div id="html_4ba9ab4ec12f481c8e5480b320e6a42b" style="width: 100.0%; height: 100.0%;"><center><b>St Laurent</b></center><br><img src="https://raw.githubusercontent.com/RPetitpierre/LTM_streets/master/St_Laurent.png" height="20"></div>`)[0];
+            popup_3c0afbd2cc764cc3813dd897a04f28c0.setContent(html_4ba9ab4ec12f481c8e5480b320e6a42b);
+        
+
+        marker_1383b40b62764effaf345fb48378b3f9.bindPopup(popup_3c0afbd2cc764cc3813dd897a04f28c0)
+        ;
+
+        
+    
+    
+            var marker_0d51eae0a3984e39a684063d7d09b772 = L.marker(
+                [46.54409545, 6.61635795],
+                {"markerColor": "red"}
+            ).addTo(map_32e62bedd9a14cf88368921141d029d0);
+        
+    
+        var popup_b5d20cae7cc4438a8bdbb2edfa21bc8b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_48680eb7242c413da719fcc61c38f915 = $(`<div id="html_48680eb7242c413da719fcc61c38f915" style="width: 100.0%; height: 100.0%;"><center><b>St Pierre</b></center><br><img src="https://raw.githubusercontent.com/RPetitpierre/LTM_streets/master/St_Pierre.png" height="20"></div>`)[0];
+            popup_b5d20cae7cc4438a8bdbb2edfa21bc8b.setContent(html_48680eb7242c413da719fcc61c38f915);
+        
+
+        marker_0d51eae0a3984e39a684063d7d09b772.bindPopup(popup_b5d20cae7cc4438a8bdbb2edfa21bc8b)
+        ;
+
+        
+    
+    
+            var marker_bd0d70b7b0854b638d59c8b0232cde73 = L.marker(
+                [46.5736, 6.616316890524896],
+                {"markerColor": "red"}
+            ).addTo(map_32e62bedd9a14cf88368921141d029d0);
+        
+    
+        var popup_653e6171b63b4b00aae7f56583741a3f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_00ad0c4f644c4308adacd81ea1a3be44 = $(`<div id="html_00ad0c4f644c4308adacd81ea1a3be44" style="width: 100.0%; height: 100.0%;"><center><b>Vernand dessus|ous</b></center><br><img src="https://raw.githubusercontent.com/RPetitpierre/LTM_streets/master/Vernand_dessus|ous.png" height="20"></div>`)[0];
+            popup_653e6171b63b4b00aae7f56583741a3f.setContent(html_00ad0c4f644c4308adacd81ea1a3be44);
+        
+
+        marker_bd0d70b7b0854b638d59c8b0232cde73.bindPopup(popup_653e6171b63b4b00aae7f56583741a3f)
+        ;
+
+        
+    
+    
+            var marker_a132f48df8b7426fbb36eb4a2f206105 = L.marker(
+                [46.519975450000004, 6.6358993],
+                {"markerColor": "red"}
+            ).addTo(map_32e62bedd9a14cf88368921141d029d0);
+        
+    
+        var popup_d105ce4f469945f697565bc67da71944 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3b8abed6929a4ee085d6693106a20e9a = $(`<div id="html_3b8abed6929a4ee085d6693106a20e9a" style="width: 100.0%; height: 100.0%;"><center><b>de Bourg</b></center><br><img src="https://raw.githubusercontent.com/RPetitpierre/LTM_streets/master/de_Bourg.png" height="20"></div>`)[0];
+            popup_d105ce4f469945f697565bc67da71944.setContent(html_3b8abed6929a4ee085d6693106a20e9a);
+        
+
+        marker_a132f48df8b7426fbb36eb4a2f206105.bindPopup(popup_d105ce4f469945f697565bc67da71944)
+        ;
+
+        
+    
+</script>
